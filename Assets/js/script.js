@@ -12,9 +12,11 @@ function writePassword() {
 //Generate password function
 function generatePassword() {
   let passwordLength = prompt("Enter password length (minimum 8 characters):");
+  passwordLength = Number(passwordLength)
   if (passwordLength < 8) {
     alert("Password length must be at least 8 characters");
-  if else (passwordLength > 100)
+
+  else if (passwordLength > 100)
       alert("Password length must be at most 100 characters");
   return;
     };
