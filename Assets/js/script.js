@@ -14,6 +14,7 @@ function writePassword() {
 
 // Generate password function : Password Criteria
 function generatePassword() {
+
   // Prompt for length of Password
   let passwordLength = prompt("Enter password length (minimum 8 characters):");
   // passwordLength = Number(passwordLength);
@@ -43,13 +44,13 @@ function generatePassword() {
     alert("At least one character type must be selected");
     return;
   }
-  // For loop to generate password
+  // "For loop" to generate password
+  let password = "";
   for (let i = 0; i < passwordLength; i++) {
     let charType = charTypes[Math.floor(Math.random() * charTypes.length)];
-    password + = charType.charAt(Math.floor(Math.random() * charType.length));
+    password = password + charType.charAt(Math.floor(Math.random() * charType.length));
   } 
   return password;
-
 }
 
 // // Add event listener to generate button
