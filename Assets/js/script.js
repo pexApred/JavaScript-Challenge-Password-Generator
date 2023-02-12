@@ -1,10 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Center content code
-var div = document.getElementsByClassName("wrapper");
-
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
