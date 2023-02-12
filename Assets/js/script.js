@@ -40,8 +40,11 @@ function generatePassword() {
   if (includeSpecial) charTypes.push(" !#$%&'()*+,-./:;<=>?@[\]^_`{|}~");
   // Validation Alert
   if (charTypes.length === 0) {
-    alert("At least one character type must be selected")
+    alert("At least one character type must be selected");
+    return;
   }
+
+  
 }
 
 
