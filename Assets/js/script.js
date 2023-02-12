@@ -16,7 +16,7 @@ function writePassword() {
 function generatePassword() {
   // Prompt for length of Password
   let passwordLength = prompt("Enter password length (minimum 8 characters):");
-  passwordLength = Number(passwordLength);
+  // passwordLength = Number(passwordLength);
   if (passwordLength < 8) {
     alert("Password length must be at least 8 characters");
     return;
@@ -24,7 +24,7 @@ function generatePassword() {
   else if (passwordLength > 128) {
     alert("Password length must be at most 128 characters");
     return;
-  } console.log(generatePassword);
+  } 
   // NOTE to self: CONFIRM function is used to display dialog box with a message & 2 buttons "OK" = TRUE or "CANCEL" = FALSE
   // Confirms for character types
   let includeLowercase = confirm("Should I include lowercase characters?");
@@ -43,10 +43,14 @@ function generatePassword() {
     alert("At least one character type must be selected");
     return;
   }
+  // For loop to generate password
+  for (let i = 0; i < passwordLength; i++) {
+    let charType = charTypes[Math.floor(Math.random() * charTypes.length)];
+    password + = charType.charAt(Math.floor(Math.random() * charType.length));
+  } 
+  return password;
 
-  
 }
-
 
 // // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
